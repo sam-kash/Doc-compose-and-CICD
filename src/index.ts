@@ -8,12 +8,11 @@ const prismaClient = new PrismaClient();
 
 app.get("/",async (req,res) => {
 
-    const data = await (req, res) => {
+    //const data = await(req, res) => {
         const data = await prismaClient.user.findMany();
         res.json({
             data 
         })
-    }
     
     res.json({
 
