@@ -1,0 +1,4 @@
+
+Here are the specs I will be keeping a track of 
+Prisma - Postgres DB
+Type Script
