@@ -14,7 +14,7 @@
 ## Docker installation
 - Install docker
 - Start postgres
-    - docker run -e POSTGRES_PASSWORD = mysecretpassword -d -p 5432:5432 postgres
+    - docker run -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres
 - Build the image
     - `docker build -t user_image .`
 - Start the image 
