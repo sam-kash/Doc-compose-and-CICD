@@ -13,12 +13,14 @@
 
 ## Docker installation
 - Install docker
+- Create a network
+    - `docker network create doc-comp-net`
 - Start postgres
-    - docker run -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres
+    - `docker run --network doc-comp-net --name postgres -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres`
 - Build the image
-    - `docker build -t user_image .`
+    - `docker build --network=host -t doc-comp-proj .`
 - Start the image 
-    - `docker run -p 3000:3000 user_image`
+    - `docker run -e DATABASE_URL="postgresql://postgres:mysecretpassword@postgres:5432/postgres" --network doc-comp-net -p 3000:3000 doc-compose-bckend`
 
 ## Docker Compose installation steps
 - Install docker

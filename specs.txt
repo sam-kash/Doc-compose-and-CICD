@@ -2,3 +2,9 @@
 Here are the specs I will be keeping a track of 
 Prisma - Postgres DB
 Type Script
+
+Network created 
+started Postgres with the name and the network 
+    -docker run --network doc-comp-net --name postgres -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres
+
+whats left is docker build

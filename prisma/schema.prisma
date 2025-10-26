@@ -1,15 +1,15 @@
-generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
-}
+  generator client {
+    provider = "prisma-client-js"
+    //output   = "./generated/prisma"
+  }
 
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
+  datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+  }
 
-model user {
-  id        String      @id     @default(uuid())
-  usename   String       
-  password  String
-}
+  model user {
+    id        String      @id     @default(uuid())
+    username   String       
+    password  String
+  }
